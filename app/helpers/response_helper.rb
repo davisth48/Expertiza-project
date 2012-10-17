@@ -62,6 +62,16 @@ module ResponseHelper
     filtered_advices
   end
 
+  def get_tabs_title(last_topic, new_topic)
+    if last_topic.eql? nil
+      #this is the first tab
+      render :partial => "response/tabs", :locals => {:title => new_topic, :is_first => true}
+    elsif !new_topic.eql? last_topic
+      #render new tabs
+      render :partial => "response/tabs", :locals => {:title => new_topic, :is_first => false}
+    end
+  end
+
   def get_accordion_title(last_topic, new_topic)
     if last_topic.eql? nil
       #this is the first accordion
