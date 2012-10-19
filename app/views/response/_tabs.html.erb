@@ -5,15 +5,17 @@
 
 
 <% if is_first %>
-    <div id="tabs" xmlns="http://www.w3.org/1999/html">
+    <div id="<%=reviewid%>" xmlns="http://www.w3.org/1999/html">
       <ul><li><a href="#<%=title%>"><b><%= title %></b></a></li> </ul>
-      <div id="<%=title%>"/>
+      <div id="<%=title%>">
 <% else %>
     </div>
     <script>
-        $("#tabs ul").append('<li><a href="#<%=title%>"><b><%= title %></b></a></li>');
+        $("#<%=reviewid%> ul").append('<li><a href="#<%=title%>"><b><%= title %></b></a></li>');
     </script>
-    <div id="<%=title%>"/>
-
-
+    <div id="<%=title%>">
 <% end %>
+
+
+
+
