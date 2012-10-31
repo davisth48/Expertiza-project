@@ -46,7 +46,7 @@ module ApplicationHelper
     item = Object.const_get(model).find(element[column.to_sym])
     return item[field.to_sym]
   end
-
+# method to get the tab title when using tabbed approach for display
   def get_tabs_title(last_topic, new_topic)
     if last_topic.eql? nil
       #this is the first tabs
